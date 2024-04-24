@@ -43,7 +43,7 @@ class App {
     }
     intializeControllers(controllers) {
         controllers.forEach((controller) => {
-            this.app.use('/api', controller.router);
+            this.app.use(controller.router);
         });
     }
     setErrorHandler() {

@@ -17,11 +17,11 @@ const typeorm_1 = require("typeorm");
 const path_1 = __importDefault(require("path"));
 exports.AppDataSource = new typeorm_1.DataSource({
     type: "postgres",
-    host: "localhost",
+    host: "dpg-coko4egl5elc73ddjsv0-a",
     port: 5432,
-    username: 'postgres',
-    password: "postgres",
-    database: "identity_db",
+    username: 'amarmishra',
+    password: "SDZd6eEuTWIHXAc7ebwdJk36nIXOyhl6",
+    database: "bitespeed_db_0xim",
     entities: [path_1.default.join(__dirname, './models/*.{ts,js}')],
     logging: true,
     synchronize: true

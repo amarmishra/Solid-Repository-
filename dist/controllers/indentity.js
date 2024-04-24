@@ -44,6 +44,7 @@ class IdentityController {
                 let primaryContacts = contactTrail.filter((contact) => { return contact.linkPrecedence === 'primary'; });
                 //Case : contactTrail has more than one primary contacts 
                 if (primaryContacts.length > 1) {
+                    //get Primary Contacts Ids
                     const primaryContactIds = primaryContacts.map((contact) => { return contact.id; });
                     const updatedContact = yield contact_service_1.default.updateContact({ id: primaryContactIds[1], linkedId: primaryContactIds[0], linkPrecedence: 'secondary' });
                     contactTrail = (0, helpers_1.updateContactTrailWithLinkPrcedence)(contactTrail, updatedContact);
