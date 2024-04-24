@@ -10,7 +10,6 @@ export const AppDataSource =
         password: "SDZd6eEuTWIHXAc7ebwdJk36nIXOyhl6",
         database: "bitespeed_db_0xim",
         entities: [path.join(__dirname, './models/*.{ts,js}')],
-        ssl: true,
         logging: true,
         synchronize: true
     })
