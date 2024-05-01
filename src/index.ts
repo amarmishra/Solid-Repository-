@@ -1,8 +1,8 @@
 import 'reflect-metadata'
 
 import App from './app'
-import IdentityController from './controllers/indentity'
+import PostController from './controllers/post'
 
-const app=new App(3000,[new IdentityController()])
+const app=new App(3000,[new PostController()])
 
 app.listen()

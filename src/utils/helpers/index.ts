@@ -1,4 +1,4 @@
-import Contact from "../../models/contact";
+import Contact from "../../entities/contact";
 import { IResponseAccumulator } from '../interfaces/response.interface'
 export function formatResponse(contactTrail: Contact[]) {
 

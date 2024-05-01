@@ -1,7 +1,9 @@
-import { DataSource } from "typeorm";
+//import { DataSource } from "typeorm";
 import path from 'path'
+import mongoose from 'mongoose'
 
-export const AppDataSource =
+/**
+  export const AppDataSource =
     new DataSource({
         type: "postgres",
         host: "dpg-coko4egl5elc73ddjsv0-a",
@@ -14,8 +16,14 @@ export const AppDataSource =
         logging: true,
         synchronize: true
     })
-export async function connectDb() {
+
+    export async function connectDb() {
     AppDataSource.initialize()
+}
+    */
+
+export async function connectDb(){
+    await mongoose.connect('mongodb+srv://amarm130:meomanooz123@mongodb-cluster.6dxqaqj.mongodb.net/?retryWrites=true&w=majority&appName=mongodb-cluster')
 }
 
 

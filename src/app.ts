@@ -1,5 +1,5 @@
 //import cors from 'cors'
-import { DataSource } from 'typeorm'
+//import { DataSource } from 'typeorm'
 import express, { Application, Express } from 'express'
 import path from 'path'
 import IApp from './utils/interfaces/app.interface'
@@ -24,6 +24,7 @@ class App implements IApp {
             this.databaseUp = true
             console.log('Database connected successfully')
         } catch (error) {
+            console.log(error)
             throw new HttpException(500, 'Unable to connect to database')
         }
 

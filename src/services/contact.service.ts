@@ -1,6 +1,6 @@
 import { Repository } from "typeorm";
-import Contact from '../models/contact'
-import { contactRepo } from "../repository";
+import Contact from '../entities/contact'
+import { contactRepo } from "../repositories";
 
 class ContactService {
     constructor(public Contact: Repository<Contact>) {
